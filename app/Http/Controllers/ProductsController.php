@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+/* use Illuminate\Support\Facades\DB; */
+use Illuminate\Support\Facades\Session;
 use App\Product;
 use App\Cart;
 
@@ -27,6 +28,17 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $cart->addItem($id, $product);
         $request->session()->put('cart', $cart);
-        dump($cart);
+
+        return redirect()->route('allProducts');
+    }
+
+    public function showCart(){
+        $cart = Session::get('cart');
+        if($cart){
+            return view('cartProducts', ['cartItems'=>$cart]);
+        } else {
+            echo "cart is empty";
+            /* return redirect()->route('allProducts'); */
+        }
     }
 }
