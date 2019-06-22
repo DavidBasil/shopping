@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Product;
 
 class ProductsController extends Controller
 {
     public function index(){
-        $products = [
-            0 => ["name"=>"Iphone", "category"=>"smart phones", "price"=>1000],
-            1 => ["name"=>"Galaxy", "category"=>"tablets", "price"=>2000],
-            2 => ["name"=>"Sony", "category"=>"TV", "price"=>3000]
-        ];
+        /* $products = [ */
+        /*     0 => ["name"=>"Iphone", "category"=>"smart phones", "price"=>1000], */
+        /*     1 => ["name"=>"Galaxy", "category"=>"tablets", "price"=>2000], */
+        /*     2 => ["name"=>"Sony", "category"=>"TV", "price"=>3000] */
+        /* ]; */
+        /* $products = DB::table('products')->get(); */
+        $products = Product::all();
 
         return view('allproducts', compact('products'));
     }
