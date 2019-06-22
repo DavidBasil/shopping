@@ -10,6 +10,6 @@ class Product extends Model
 
     public function getPriceAttribute($value){
         $newForm = "$".$value;
-        return $newForm;;
+        return $newForm;
     }
 }
