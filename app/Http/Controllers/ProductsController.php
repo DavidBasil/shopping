@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Product;
+use App\Cart;
 
 class ProductsController extends Controller
 {
@@ -18,5 +19,14 @@ class ProductsController extends Controller
         $products = Product::all();
 
         return view('allproducts', compact('products'));
+    }
+
+    public function addProductToCart(Request $request, $id){
+        $prevCart = $request->session()->get('cart');
+        $cart = new Cart($prevCart);
+        $product = Product::find($id);
+        $cart->addItem($id, $product);
+        $request->session()->put('cart', $cart);
+        dump($cart);
     }
 }
