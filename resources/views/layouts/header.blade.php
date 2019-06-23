@@ -56,7 +56,7 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="logo pull-left">
-                <a href="index.html"><img src="{{asset('images/home/logo.png')}}" alt="" /></a>
+                <a href="{{ route('allProducts') }}"><img src="{{asset('images/home/logo.png')}}" alt="" /></a>
               </div>
               <div class="btn-group pull-right">
                 <div class="btn-group">
@@ -87,7 +87,13 @@
                 <ul class="nav navbar-nav">
                   <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                   <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                  <li><a href="{{ route('cartproducts') }}"><i class="fa fa-star"></i> Cart</a></li>
+                  <li><a href="{{ route('cartproducts') }}">
+                      @if(Session::has('cart'))
+                        <div class="badge">
+                        {{ Session::get('cart')->totalQuantity }}
+</div>
+                      @endif
+                      Cart</a></li>
 
                   @if(Auth::check())
                     <li><a href="./home"><i class="fa fa-lock"></i> Profile</a></li>
