@@ -90,8 +90,7 @@
                   <li><a href="{{ route('cartproducts') }}">
                       @if(Session::has('cart'))
                         <div class="badge">
-                        {{ Session::get('cart')->totalQuantity }}
-</div>
+                        {{ Session::get('cart')->totalQuantity }}</div>
                       @endif
                       Cart</a></li>
 
