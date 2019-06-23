@@ -87,6 +87,7 @@
                 <ul class="nav navbar-nav">
                   <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                   <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                  <li><a href="{{ route('cartproducts') }}"><i class="fa fa-star"></i> Cart</a></li>
 
                   @if(Auth::check())
                     <li><a href="./home"><i class="fa fa-lock"></i> Profile</a></li>
