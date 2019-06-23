@@ -22,3 +22,7 @@ Route::get('products/addtocart/{id}', 'ProductsController@addProductToCart')->na
 Route::get('cart', 'ProductsController@showCart')->name('cartproducts');
 Route::get('products/deleteItemFromCart/{id}', 'ProductsController@deleteItemFromCart')
     ->name('deleteItemFromCart');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
