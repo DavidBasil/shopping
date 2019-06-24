@@ -30,13 +30,13 @@
         <td>{{ $product['type'] }}</td>
         <td>
           <a 
-            {{-- href="{{ route('admin.products.editImageForm', ['id'=>$product['id']]) }}" --}}
+            href="{{ route('adminEditProductImageForm', ['id'=>$product['id']]) }}"
             class="btn btn-primary">Edit Image
           </a>
         </td>
         <td>
           <a 
-            {{-- href="{{ route('admin.products.editForm', ['id'=>$product['id']]) }}" --}}
+            href="{{ route('adminEditProductForm', ['id'=>$product['id']]) }}"
             class="btn btn-primary">Edit
           </a>
         </td>
