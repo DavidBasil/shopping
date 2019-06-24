@@ -10,7 +10,7 @@
     <link href="{{asset ('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- scripts -->
-    <script src="{{ asset ('js/jquery.min.js') }}"></script>
+    {{-- <script src="{{ asset ('js/jquery.js') }}"></script> --}}
 
     <!-- Custom styles for this template -->
     <link href="{{asset ('css/dashboard.css') }}" rel="stylesheet">
@@ -49,8 +49,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                <li class="active"><a href="{{route('adminDisplayProducts')}}">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="{{route('adminCreateProductForm')}}">Insert</a></li>
-                <li><a href="{{route('ordersPanel')}}">Orders</a></li>
+                {{-- <li><a href="{{route('adminCreateProductForm')}}">Insert</a></li> --}}
+                {{-- <li><a href="{{route('ordersPanel')}}">Orders</a></li> --}}
                  <li><a href="#">Edit</a></li>
                 <li><a href="#">Users</a></li>
                 <li><a href="#">Analytics</a></li>
@@ -78,7 +78,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{{asset ('js/bootstrap.js') }}" ></script>
+<script src="{{asset ('js/bootstrap.min.js') }}" ></script>
 
 
 </body>
