@@ -12,6 +12,7 @@
     <div class="table-responsive cart_info">
       <table class="table table-condensed">
         <thead>
+          <h2>{{ $userData['data']['name'] }}</h2>
           <tr class="cart_menu">
             <td class="image">Item</td>
             <td class="description"></td>

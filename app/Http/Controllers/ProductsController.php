@@ -35,6 +35,7 @@ class ProductsController extends Controller
     public function showCart(){
         $cart = Session::get('cart');
         if($cart){
+            /* dd(gettype($cart)); */
             return view('cartProducts', ['cartItems'=>$cart]);
         } else {
             echo "cart is empty";
