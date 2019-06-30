@@ -32,3 +32,4 @@ Route::get('admin/products', 'Admin\AdminProductsController@index')
     ->name('adminDisplayProducts');
 Route::get('admin/editProductForm/{id}', 'Admin\AdminProductsController@editProductForm')->name('adminEditProductForm');
 Route::get('admin/editProductImageForm/{id}', 'Admin\AdminProductsController@editProductImageForm')->name('adminEditProductImageForm');
+Route::post('admin/updateProductImage/{id}', 'Admin\AdminProductsController@updateProductImage')->name('adminUpdateProductImage');

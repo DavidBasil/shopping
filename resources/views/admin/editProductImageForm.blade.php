@@ -12,11 +12,11 @@
 
   <h3>Current Image</h3>
   <div>
-    <img src="{{ asset('storage') }}/{{$product['image']}}" alt="">
+    <img src="{{ asset('storage') }}/product_images/{{$product['image']}}" alt="">
   </div>
 
   <form 
-    action="/admin/updateImage/{{ $product->id }}" 
+    action="/admin/updateProductImage/{{ $product->id }}" 
     method="post" 
     enctype="multipart/form-data">
     @csrf
